@@ -44,9 +44,18 @@ void print_multiplication_dowhile() {
 
 int main(int argc, char *argv[]) {
 
-	//print_multiplication_for();	
-	//print_multiplication_while();	
-	print_multiplication_dowhile();	
+	const int MAX = 3;
+	
+	void (*funcs[MAX])();
+	funcs[0] = &print_multiplication_for;
+	funcs[1] = &print_multiplication_while;
+	funcs[2] = &print_multiplication_dowhile;
+	
+	int i;
+	for (i = 0; i < MAX; i++) {
+		funcs[i]();
+		printf("================================\n");
+	}
 		
 	return 0;
 }
