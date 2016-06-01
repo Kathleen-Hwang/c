@@ -29,8 +29,8 @@ int main() {
 	printf("\n");
 	
 	printf("%p\n", arr[0] + 1);	// int *
-	printf("%p\n", arr + 1);	  // int (*)[2]
-	printf("%p\n", &arr + 1);	  // int (*)[2][2]
+	printf("%p\n", arr + 1);	// int (*)[2]
+	printf("%p\n", &arr + 1);	// int (*)[2][2]
 	
 	return 0;
 }
